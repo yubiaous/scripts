@@ -1,0 +1,140 @@
+#!/usr/bin/python
+import time
+import datetime
+import base64
+EPOCHTIME=	int(time.time())
+LOCALHOST=	"10.10.219.47"
+
+MSTORE_IP=								"10.10.215.143"
+MSTORE_USERNAME=						"root"
+MSTORE_PASSWORD=						"mavenir"
+MSTORE_SSH_PORT=						22
+MSTORE_SUBSCRIBER_SERVICE_PORT=			80
+MSTORE_SESSION_NAME=					"mStoreService"
+
+MSTORE_CASSANDRA_IP=                   "10.10.227.42"
+MSTORE_CASSANDRA_USERNAME=             "root"
+MSTORE_CASSANDRA_PASSWORD=             "mavenir"
+MSTORE_CASSANDRA_SSH_PORT=             22
+MSTORE_CASSANDRA_KEYSPACE=             "ph2o_tmo_schema"
+
+PNS_SERVER=								"10.10.219.47"
+PNS_SERVICE_PORT=						6162
+PNS_SERVER_NAME=						"pns.server.mavenir1.com"
+
+NMS_SERVER=								"10.10.219.47"
+NMS_SERVICE_PORT=						6063
+NMS_SUBSCRIPTION_DURATION=              7200
+NMS_CLIENT_CORRELATOR=                  12345
+NMS_SERVER_NAME=						NMS_SERVER
+
+SWIFT_IP=								"10.10.217.156"
+SWIFT_USERNAME=                        "root"
+SWIFT_PASSWORD=                        "mavenir"
+SWIFT_SSH_PORT=                        22
+SWIFT_PORT=								8080
+SWIFT_SESSION_NAME=						"swift"
+
+PATH_TO_STORE_LOGS_PCAPS=               "/data/automation/"+str(EPOCHTIME)+"/"
+
+OEM_SERVER_ROOT_PATH=					"wsg.t-mobile.com:443"
+WRG_SERVER_ROOT_PATH=					"wrg.t-mobile.com:443"
+
+#Provision using REST required Variables
+REST_USER_PASSWORD=						23456
+IMAP_PASSWORD=			REST_USER_PASSWORD
+REST_USER_PIN=							70157
+EnCrypted_IMAP_Password=				"lTUQPVD2T1FfcXM3bSFaXg=="
+EnCrypted_PIN=							"5pLqIjheFRn5HuWsV9mXQA=="
+REST_PROVISION_URI=						"host/nms/v1/vm/provision"
+REST_PROVISION_HEADER=					{"Content-Type":"application/xml","User-Agent":"VMAS","Expect":""}
+REST_SUBSCRIBER_ADD_OBJ_FILE=           "AddNewSubscriber.xml"
+
+#Provision using SOAP required variables 
+SOAP_PROVISION_URI=						"/SubscriberProvisioningService/MStoreProvisionServlet"
+SOAP_PROVISION_HEADER=					{"Content-Type":"text/xml;charset=UTF-8","Expect":""}
+SOAP_SUBSCRIBER_ADD_OBJ_FILE=			"AddSubscriber.xml"
+SOAP_SUBSCRIBER_DEL_OBJ_FILE=			"DeleteSubscriber.xml"
+
+
+
+
+#Response related variables
+FE_NAME=                                "mStoreFE"
+NODE_ID=                                0
+SLOT_ID=                                1
+SHELF_ID=                               1
+LOCAL_FQDN=                             "dummy-fqdn"
+VM_SERVICE_PORT=						8091
+RESPONSE_HEADER_SERVER_NAME=            "Mavenir Web Application Server"
+
+#
+FROM_MSISDN=                            "9999999999"
+TO_MSISDN=                              "8888888888"
+DIGITS_COS=                            10
+VM_COS=                                240
+DIGITS_VMAS_COS=                       1340
+
+#Message Deposit related Variables 
+RCS_PARENT_PATH=                        "RCSMessageStore"
+MSG_FROM=								"sip:"+str(FROM_MSISDN)+"@lab.t-mobile.com"
+MSG_TO=                                 "sip:"+str(TO_MSISDN)+"@lab.t-mobile.com"
+MSG_DEPOSIT_TIME=						datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')
+CONVERSATION_ID=						"2dbc584e-fc46-4a37-9a56-c2b93246d788"
+CONTRIBUTION_ID=						"e0a1029e-a48b-4ca6-b185-299dada439be"
+P_ASSERTED_SERVICE=						"urn:urn-7:3gpp-service.ims.icsi.oma.cpm.msg.group"
+IMDN_MESSAGE_ID=						"75114622-099d-4503-8166-e84bd1b620dc"
+CORRELATION_ID=							IMDN_MESSAGE_ID
+MSG_DEPOSITTIME_EPOCH=					int(time.time())
+X_IMDN_CORRELATOR=						str(TO_MSISDN)+"_"+str(CONVERSATION_ID)+"_"+str(IMDN_MESSAGE_ID)
+X_SIP_CALLID=							"005056884776-4d72-eb161700-1e2-571fa736-a0e46"
+
+#Message Context related Variables
+PM_MESSAGE_CONTEXT=						"X-RCS-PM"
+CHAT_MESAAGE_CONTEXT=					"X-RCS-Chat"
+LM_MESSAGE_CONTEXT=						"X-RCS-LM"
+FT_MESSAGE_CONTEXT=						"X-RCS-FT"
+
+#PM and Chat deposit related variables
+CHAT_PARENT_FOLDER_PATH=                str(RCS_PARENT_PATH)+"/Chat"
+CHAT_CONTENT_TYPE=						"text/plain"
+CHAT_CONTENT_DATA=						"This is the new message we are depositing to test"
+CHAT_CONTENT_LENGTH=					len(CHAT_CONTENT_DATA)
+CHAT_CHARSET=							"UTF-8"
+CHAT_CONTENT_TRANSFER_ENCODING=			"quoted-printable"
+BOUNDARY_CONTENT=						"multipart/form-data;boundary=\"-boundaryRMS123\";"
+
+
+#Headers related to RCS flow
+OEM_DEPOSIT_HEADERS=					{"Content-Type":BOUNDARY_CONTENT,"User-Agent":""}
+WRG_DEPOSIT_HEADERS=					{"Content-Type":BOUNDARY_CONTENT,"User-Agent":"WRG"}
+OEM_FOLDER_SEARCH_HEADER=				{"Content-Type":"application/json;","User-Agent":""}
+WRG_FOLDER_SEARCH_HEADER=               {"Content-Type":"application/json;","User-Agent":"WRG"}
+OEM_FETCH_HEADERS=						{"User-Agent":""}
+WRG_FETCH_HEADERS=                      {"User-Agent":"WRG"}
+OEM_BULK_UPDATE_HEADERS=				{"Content-Type": "application/json;","User-Agent":""}
+WRG_BULK_UPDATE_HEADERS=				{"Content-Type": "application/json;","User-Agent":"WRG"}
+
+#Uri
+RCS_HOST_URI=                           "/rmsclient/nms/v1/rms/tel%3a%2b"
+OEM_HOST_URI=                           "/oemclient/nms/v1/ums/tel%3a%2b"
+
+
+#PNS related Variables
+PNS_TYPE=								"RCSPage"
+PNS_SUB_TYPE=							"Chat"
+PNS_CHANNEL=							"pns_channe"
+PNS_TTL=								"600"
+BULK_PNS_TYPE=							"Notify"
+BULK_PNS_SUBTYPE=						"FullSync"
+PNS_SERVICE_NAME=						"Sync App"
+PNS_AUTH_USER=							"Aladdin"
+PNS_AUTH_PASSWORD=						"khuljasimsim"
+PNS_AUTHORIZATION=						base64.b64encode('Aladdin:khuljasimsim')
+VAR_CHARSET=							"utf-8"
+VAR_CONTENT_TRANSFER_ENCODING=			"quoted-printable"
+PNS_RESPONSE_CONTENT_TYPE=				"application/json"
+
+TRL_PATH=								"/data/redun/cdr/trl"
+TMM_PATH=								"/data/redun/tmm"
+P_ASSERTED_SERVICE_PM=					"urn:urn-7:3gpp-service.ims.icsi.oma.cpm.msg.pm"
