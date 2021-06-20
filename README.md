@@ -1,0 +1,3 @@
+# scripts
+myscripts
+sql scripts
