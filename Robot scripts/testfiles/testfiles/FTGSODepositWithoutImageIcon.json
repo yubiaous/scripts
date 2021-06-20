@@ -1,0 +1,18 @@
+---boundaryRMS123{LF}
+{CRLF}
+Content-Type: application/json{CRLF}
+{CRLF}
+{"object": {"parentFolderPath":"${file_var_parentFolderPath}","attributes":{"attribute":[{"name":"From","value":"${file_var_From}"},{"name":"To","value":"${file_var_To},${file_var_To1}"},{"name":"Date","value":"${file_var_Date}"},{"name":"Conversation-ID","value":"${file_var_Conversation-ID}"},{"name":"Contribution-ID","value":"${file_var_Contribution-ID}"},{"name":"P-Asserted-Service","value":"${file_var_P-Asserted-Service}"},{"name":"IMDN-Message-ID","value":"${file_var_IMDN-Message-ID}"},{"name":"Direction","value":"${file_var_Direction}"},{"name":"X-DateTime","value":"${file_var_X-DateTime}"},{"name":"X-IMDN-Correlator","value":"${file_var_X-IMDN-Correlator}"},{"name":"X-SIP-CallId","value":"${file_var_X-SIP-CallId}"},{"name":"Message-Context","value":"${file_var_Message-Context}"}]}}}{CRLF}
+---boundaryRMS123{LF}
+{CRLF}
+Content-Type: application/group-state-object+xml{CRLF}
+{CRLF}
+<?xml version="1.0" encoding="UTF-8"?>{CRLF}
+<groupstate{CRLF}
+timestamp="Thu, 09 Jun 2016 14:34:45 +0000"{CRLF}
+lastfocussessionid="sip:mavcid-San19843011141-f2~6e3f3c0748d28da55a9996287065001e@rms94-wr-b.st4.mavenir.lab:5060"{CRLF}
+group-type="normal"{CRLF}
+contributionid="${file_var_Contribution-ID}"{CRLF}
+</groupstate>{CRLF}
+{CRLF}
+---boundaryRMS123--{CRLF}

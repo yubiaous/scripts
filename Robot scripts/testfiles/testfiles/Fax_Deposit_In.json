@@ -1,0 +1,58 @@
+---boundaryRMS123--
+
+Content-Type: application/json
+
+{
+  "object": {
+  	"parentFolderPath": "Media/Fax",
+    "attributes": {
+      "attribute": [
+        {
+          "name": "date",
+          "value": "2015-08-28T12:37:59Z"
+        },
+        {
+          "name": "Message-Context",
+          "value": "fax-message"
+        },
+        {
+          "name": "Message-Id",
+          "value": "75114622-099d-4503-8166-e84bd1b620dc"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Direction",
+          "value": "Out"
+        },
+        {
+          "name": "From",
+          "value": "${MSG_FROM}"
+        },
+        {
+          "name": "To",
+          "value": "${MSG_TO}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "Multipart/fax-message"
+        },
+        {
+          "name": "ReportRequested",
+          "value": "true"
+	}]
+	}
+   }
+ }
+
+---boundaryRMS123
+
+Content-Type: application/pdf
+Content-Disposition: attachment; filename="TESTINg.pdf"
+Content-Length: 90438
+X-Content-Pages: 3
+Content-Transfer-Encoding: base64
+
+---boundaryRMS123--

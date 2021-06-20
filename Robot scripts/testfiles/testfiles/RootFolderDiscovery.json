@@ -1,0 +1,15 @@
+{
+"selectionCriteria": {
+  "maxEntries": 100,
+  "searchCriteria": {
+  "criterion": [
+       {
+       "type": "Attribute",
+       "name": "root",
+       "value": "Yes"
+       }
+      ]
+    } 
+  }
+}
+

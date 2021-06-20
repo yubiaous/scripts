@@ -1,0 +1,34 @@
+---boundaryRMS123
+
+Content-Type: application/json
+
+{"object": {"parentFolderPath":"PARENT_FOLDER_PATH","attributes":{"attribute":[{"name":"From","value":"MSG_FROM"},{"name":"To","value":"MSG_TO"},{"name":"Date","value":"2016-05-19T16:46:49Z"},{"name":"Conversation-ID","value":"CONVERSATION_ID"},{"name":"Contribution-ID","value":"CONTRIBUTION_ID"},{"name":"IMDN-Message-ID","value":"IMDN_MESSAGE_ID"},{"name":"Direction","value":"DIRECTION_VALUE"},{"name":"X-IMDN-Correlator","value":"X_IMDN_CORRELATOR"},{"name":"X-RCS-MSG-Status","value":"X_RCS_MSG_STATUS"},{"name":"Message-Context","value":"MESSAGE_CONTEXT"}]}}}
+---boundaryRMS123
+
+Content-Type:Message/CPIM
+
+From: <MSG_FROM?Accept-Contact=+sip.instance="<urn:uuid:31abb8b3-0769-1032-9e9d-c5acf9ae46e1>";require;explicit>
+To: <MSG_TO>
+NS: imdn<urn:ietf:params:imdn>
+imdn.Message-ID: IMDN_MESSAGE_ID
+Original-To: MSG_TO
+
+Content-Disposition: notification
+Content-Type: message/imdn+xml
+Content-Length: 286
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<imdn xmlns="urn:ietf:params:xml:ns:imdn">
+  <message-id>IMDN_MESSAGE_ID</message-id>
+  <datetime>2014-08-24T11:28:29Z</datetime>
+  <recipient-uri>MSG_FROM</recipient-uri>
+  <original-recipient-uri>MSG_TO</original-recipient-uri>{CRLF}
+  <display-notification>
+    <status>
+      <displayed/>
+    </status>
+  </display-notification>
+</imdn>
+
+---boundaryRMS123--
+

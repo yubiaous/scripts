@@ -1,0 +1,22 @@
+---boundaryRMS123
+
+Content-Type: application/json
+
+{"object": {"parentFolderPath":"RCSMessageStore/Chat","attributes":{"attribute":[{"name":"From","value":"sip:14256601102@lab.t-mobile.com"},{"name":"To","value":"sip:14256601101@lab.t-mobile.com"},{"name":"Date","value":"2016-05-19T16:46:49Z"},{"name":"Conversation-ID","value":"YYkcbqqEMp7LsHxn"},{"name":"Contribution-ID","value":"ZZkcbqqEMp7LsHxn"},{"name":"P-Asserted-Service","value":"urn:urn-7:3gpp-service.ims.icsi.oma.cpm.session"},{"name":"IMDN-Message-ID","value":"rDjcbJihFhRnlWAn"},{"name":"Direction","value":"DIRECTION_VALUE"},{"name":"X-DateTime","value":"1463676409"},{"name":"X-IMDN-Correlator","value":"9886647855_YYkcbqqEMp7LsHxn_rDjcbJihFhRnlWAn"},{"name":"X-SIP-CallId","value":"00001000000004146367640"},{"name":"Message-Context","value":"X-RCS-PM"}]}}}
+---boundaryRMS123
+
+Content-Type:Message/CPIM
+
+From: 14256601102 <sip:14256601102@lab.t-mobile.com?Accept-Contact=+sip.instance="<urn:uuid:31abb8b3-0769-1032-9e9d-c5acf9ae46e1>";require;explicit>
+To: <sip:+14256601101@lab.t-mobile.com>
+NS: imdn<urn:ietf:params:imdn>
+imdn.Message-ID: rDjcbJihFhRnlWAn
+DateTime: 2014-08-24T17:36:14+05:30
+imdn.Disposition-Notification: positive-delivery, display
+
+Content-Type: text/plain
+Content-Disposition: attachment;
+Content-Length: 5
+
+Hello
+---boundaryRMS123--

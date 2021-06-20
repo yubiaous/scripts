@@ -1,0 +1,8 @@
+{ "bulkDelete": {
+    "objects": {
+      "objectReference": [
+		${LIST_OF_OBJECTURLS}
+      ]
+    }
+  }
+}

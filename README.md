@@ -1,3 +1,0 @@
-# scripts
-myscripts
-sql scripts

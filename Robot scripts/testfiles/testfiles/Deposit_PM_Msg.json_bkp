@@ -1,0 +1,23 @@
+---boundaryRMS123
+
+Content-Type: application/json
+
+{"object": {"parentFolderPath":"PARENT_FOLDER_PATH","attributes":{"attribute":[{"name":"From","value":"MSG_FROM"},{"name":"To","value":"MSG_TO"},{"name":"Date","value":"2016-05-19T16:46:49Z"},{"name":"Conversation-ID","value":"CONVERSATION_ID"},{"name":"Contribution-ID","value":"CONTRIBUTION_ID"},{"name":"P-Asserted-Service","value":"P_ASSERTED_SERVICE"},{"name":"IMDN-Message-ID","value":"IMDN_MESSAGE_ID"},{"name":"Direction","value":"DIRECTION_VALUE"},{"name":"X-DateTime","value":"X_DATETIME"},{"name":"X-IMDN-Correlator","value":"X_IMDN_CORRELATOR"},{"name":"X-SIP-CallId","value":"X_SIP_CALLID"},{"name":"Message-Context","value":"MESSAGE_CONTEXT"}]}}}
+---boundaryRMS123
+
+Content-Type:Message/CPIM
+
+From: <MSG_FROM?Accept-Contact=+sip.instance="<urn:uuid:31abb8b3-0769-1032-9e9d-c5acf9ae46e1>";require;explicit>
+To: <MSG_TO>
+NS: imdn<urn:ietf:params:imdn>
+imdn.Message-ID: IMDN_MESSAGE_ID
+DateTime: 2014-08-24T17:36:14+05:30
+imdn.Disposition-Notification: positive-delivery, display
+IMDN-Record-Route: <sip:ADHOC_PM_CF_IMDN_MESSAGE_ID@rms94-wr-a-st.lab.t-mobile.com:5060>;passthru=yes
+
+Content-Type: CONTENT_TYPE
+Content-Disposition: attachment;
+Content-Length: CONTENT_LENGTH
+
+CONTENT_DATA
+---boundaryRMS123--

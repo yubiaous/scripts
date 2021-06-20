@@ -1,0 +1,21 @@
+---boundaryRMS123
+
+Content-Type: application/json
+
+{"object": {"parentFolderPath":"PARENT_FOLDER_PATH","attributes":{"attribute":[{"name":"From","value":"sip:FROM_MSISDN@st4.mavenir.lab"},{"name":"To","value":"sip:TO_MSISDN@st4.mavenir.lab"},{"name":"Date","value":"2016-05-19T16:46:49Z"},{"name":"Conversation-ID","value":"CONVERSATION_ID_VALUE"},{"name":"Contribution-ID","value":"DjcbJihFhRnlWAnppp"},{"name":"InReplyTo-Contribution-ID","value":"ihb4FRhK"},{"name":"P-Asserted-Service","value":"urn%3Aurn-7%3A3gpp-application.ims.iari.rcs.fthttp"},{"name":"IMDN-Message-ID","value":"IMDN_MESSAGE_ID_VALUE"},{"name":"Message-ID","value":"GENERIC_MESSAGE_ID"},{"name":"Direction","value":"DIRECTION_VALUE"},{"name":"X-DateTime","value":"1464975831"},{"name":"X-IMDN-Correlator","value":"TO_MSISDN_CONVERSATION_ID_VALUE_IMDN_MESSAGE_ID_VALUE"},{"name":"X-SIP-CallId","value":"00001000000004146367640"},{"name":"Message-Context","value":"MESSAGE_CONTEXT"}]},"flags":{"flag":["\\Recent"]}}}
+---boundaryRMS123
+
+Content-Type:Message/CPIM
+
+From: <sip:FROM_MSISDN@st4.mavenir.lab?Accept-Contact=+sip.instance%3D%22%3Curn:uuid:17eaeb16-c9fc-31df-bf46-44e0d72fff8b%3E%22%3Brequire%3Bexplicit>
+NS: imdn <urn:ietf:params:imdn>
+imdn.Disposition-Notification: positive-delivery,display
+imdn.Message-ID: iDjuuuucbJihFhRnlWAn
+DateTime: 2016-05-05T17:03:11+00:00
+To: <sip:TO_MSISDN@st4.mavenir.lab>
+
+Content-Type: application/vnd.gsma.rcs-ft-http+xml;charset=utf-8
+Content-length: 666
+
+UPLOADED_FILE_INFO
+---boundaryRMS123--

@@ -1,0 +1,60 @@
+{
+	"object": {
+		"parentFolder": "${VG_RESTORED_PARENT_FOLDER}",
+		"attributes": {
+			"attribute": [{
+					"name": "Date",
+					"value": ["${RESTORED_DEPOSIT_TIMESTAMP}"]
+				},
+				{
+					"name": "Message-Context",
+					"value": ["${RESTORED_MESSAGE_CONTEXT}"]
+				},
+				{
+					"name": "Message-Id",
+					"value": ["${RESTORED_MESSAGE_ID}"]
+				},
+				{
+					"name": "MIME-Version",
+					"value": ["1.0"]
+				},
+				{
+					"name": "recordlen",
+					"value": ["${RESTORED_RECORD_LENGTH}"]
+				},
+				{
+					"name":"subject",
+					"value":["${RESTORED_GREETING_SUBJECT}"]
+				},
+				{
+					"name":"priority",
+					"value":["${RESTORED_PRIORITY}"]
+				},
+				{
+					"name":"greetingsType",
+					"value":["${RESTORED_GREETING_TYPE}"]
+				},
+				{
+					"name": "X-User-Del-Msg",
+					"value": ["true"]
+				},
+				{
+					"name": "X-User-Del-Msg-TimeStamp",
+					"value": ["${RESTORED_DELETE_MSG_TS}"]
+				},
+				{
+					"name": "Sourcenode",
+					"value": ["WSG"]
+				},
+				{
+					"name": "UID",
+					"value": ["${RESTORED_MSG_UID}"]
+				}
+			]
+		},
+		"flags": {
+			"flag": ["\\\\Recent"]
+		},
+		"payloadURL": "${VG_RESTORED_PAYLOAD_URL}"
+	}
+}

@@ -1,0 +1,10 @@
+{ "bulkUpdate": {
+    "objects": {
+      "objectReference": [
+		${LIST_OF_OBJECTURLS}
+        ]
+    },
+    "operation": "${FLAG_TO_UPDATE}",
+    "flags": { "flag": [ "\\\\Seen" ] }
+  }
+}

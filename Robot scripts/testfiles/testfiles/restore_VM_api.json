@@ -1,0 +1,68 @@
+{
+	"object": {
+		"parentFolder": "/host/nms/v1/vm/tel%3A%2B${SUBSCRIBER_ID}/folders/${FOLDER_KEY}",
+		"attributes": {
+			"attribute": [{
+					"name": "Date",
+					"value": ["${DEPOSIT_TIMESTAMP}"]
+				},
+				{
+					"name": "Message-Context",
+					"value": ["${MESSAGE_CONTEXT}"]
+				},
+				{
+					"name": "Message-Id",
+					"value": ["${VM_MESSAGE_ID}"]
+				},
+				{	"name":	"From",
+					"value":["tel:+${FROM_MSISDN}"]
+				},
+				{
+					"name": "To",
+					"value":["tel:+${TO_MSISDN}"]
+				},
+				{
+					"name":"priority",
+					"value":["${VM_PRIORITY}"]
+				},
+				{
+					"name":"sensitivity",
+					"value":["${VM_SENSITIVITY}"]
+				},
+				{
+					"name": "MIME-Version",
+					"value": ["${VM_MIME_VERSION}"]
+				},
+				{
+					"name": "recordlen",
+					"value": ["${NORMAL_VM_RECORD_LENGTH}"]
+				},
+				{
+					"name": "X-User-Del-Msg",
+					"value": ["true"]
+				},
+				{
+					"name": "X-User-Del-Msg-TimeStamp",
+					"value": ["${DELETE_MSG_TS}"]
+				},
+				{
+					"name": "UID",
+					"value": ["${MSG_UID}"]
+				},
+				{
+					"name":"Direction",
+					"value":["In"]
+				},
+				{
+					"name":"sourcenode",
+					"value":["WSG"]
+				}
+
+			]
+		},
+		"flags": {
+			"flag": ["\\\\Recent"]
+		},
+		"payloadURL": "${PAYLOAD_URL}"
+	}
+}
